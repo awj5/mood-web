@@ -26,7 +26,7 @@ const circular = localFont({
 
 export const metadata: Metadata = {
   title: "MOOD.ai | How are you feeling?",
-  description: "MOOD.ai is a privacy-focused platform tackling workplace burnout.",
+  description: "MOOD.ai is a privacy-focused platform tackling workplace burnout and promoting psychological safety.",
 };
 
 export default function RootLayout({

@@ -11,7 +11,7 @@ export default function Home() {
 
   useEffect(() => {
     const text =
-      ".ai is a privacy-focused platform tackling workplace burnout. It offers daily emotion check-ins, secure chats, and AI insights to monitor and predict mental health trends. Employers receive real-time, anonymous data with actionable insights to improve employee wellbeing.";
+      ".ai is a privacy-focused platform tackling workplace burnout and promoting psychological safety. It offers daily emotion check-ins, secure chats, and AI insights to monitor and predict mental health trends. Employers receive real-time, anonymous data with actionable insights to improve employee wellbeing.";
     const words = text.split(" ");
 
     const timer = setTimeout(() => {
