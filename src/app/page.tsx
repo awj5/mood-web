@@ -11,7 +11,7 @@ export default function Home() {
 
   useEffect(() => {
     const text =
-      ".ai is a privacy-focused wellbeing platform tackling workplace burnout. It offers daily emotion check-ins, secure chats, and AI insights to monitor and predict mental health trends. Employers receive real-time, anonymous data with actionable insights to improve employee wellbeing.";
+      ".ai is a privacy-focused platform tackling workplace burnout. It offers daily emotion check-ins, secure chats, and AI insights to monitor and predict mental health trends. Employers receive real-time, anonymous data with actionable insights to improve employee wellbeing.";
     const words = text.split(" ");
 
     const timer = setTimeout(() => {
@@ -30,7 +30,7 @@ export default function Home() {
 
   return (
     <main className="flex h-full">
-      <div className="m-auto box-content flex w-full max-w-xl gap-4 p-6">
+      <div className="m-auto box-content flex min-h-96 w-full max-w-xl gap-4 p-6 md:min-h-52">
         <AI typing={typing} setTyping={setTyping} index={index} />
 
         <div>
@@ -44,7 +44,7 @@ export default function Home() {
               href="mailto:team@mood.ai?subject=Demo Request"
               className="mt-6 inline-flex items-center gap-2 hover:opacity-50 active:opacity-25"
             >
-              <span className="font-sans text-lg">Request a demo</span>
+              <span className="font-sans text-lg">Get notified</span>
               <CircleArrowRight size={24} />
             </a>
           ) : null}
