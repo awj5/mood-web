@@ -14,7 +14,7 @@ export default function Home() {
       ".ai is a privacy-focused wellbeing platform tackling workplace burnout. It offers daily emotion check-ins, secure chats, and AI insights to monitor and predict mental health trends. Employers receive real-time, anonymous data with actionable insights to improve employee wellbeing.";
     const words = text.split(" ");
 
-    let timer = setTimeout(() => {
+    const timer = setTimeout(() => {
       if (typing && index < words.length) {
         // Type out word by word
         setDisplayedText((prev) => prev + words[index] + " ");
