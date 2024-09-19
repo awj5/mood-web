@@ -30,7 +30,7 @@ export default function Home() {
 
   return (
     <main className="flex h-full">
-      <div className="m-auto box-content flex min-h-96 w-full max-w-xl gap-4 p-6 md:min-h-52">
+      <div className="m-auto box-content flex min-h-96 w-full max-w-xl gap-4 p-6 landscape:min-h-52">
         <AI typing={typing} setTyping={setTyping} index={index} />
 
         <div>

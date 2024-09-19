@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import ogImage from "../../public/img/og.png";
 import "./globals.css";
 
 const circular = localFont({
@@ -27,6 +28,13 @@ const circular = localFont({
 export const metadata: Metadata = {
   title: "MOOD.ai | How are you feeling?",
   description: "MOOD.ai is a privacy-focused platform tackling workplace burnout and promoting psychological safety.",
+  openGraph: {
+    images: [
+      {
+        url: ogImage.src,
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
