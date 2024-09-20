@@ -32,6 +32,7 @@ export default function Form() {
             className="w-44 rounded-none border-b-2 border-foreground bg-background font-sans outline-none"
             placeholder="Enter your email"
             required
+            autoFocus
           />
 
           <button
