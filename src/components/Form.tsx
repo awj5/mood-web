@@ -21,7 +21,7 @@ export default function Form() {
           <CircleArrowRight size={24} />
         </button>
       ) : state.succeeded ? (
-        <p className="inline-block bg-gradient-to-r from-[#FF00FF] via-[#FFFF00] to-[#00FFFF] bg-clip-text font-sans text-lg text-transparent">
+        <p className="inline-block bg-gradient-to-r from-[#0000FF] via-[#FF00FF] to-[#FF0000] bg-clip-text font-sans text-lg text-transparent dark:from-[#FF00FF] dark:via-[#FFFF00] dark:to-[#00FFFF]">
           Thanks! We will let you know when we launch.
         </p>
       ) : (
