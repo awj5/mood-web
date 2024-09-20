@@ -15,17 +15,17 @@ export default function Form() {
       {!showForm ? (
         <button
           onClick={getNotifiedClick}
-          className="mt-6 inline-flex items-center gap-2 hover:opacity-50 active:opacity-25"
+          className="inline-flex items-center gap-2 hover:opacity-50 active:opacity-25"
         >
           <span className="font-sans text-lg">Get notified</span>
           <CircleArrowRight size={24} />
         </button>
       ) : state.succeeded ? (
-        <p className="mt-6 inline-block bg-gradient-to-r from-[#FF00FF] via-[#FFFF00] to-[#00FFFF] bg-clip-text font-sans text-lg text-transparent">
+        <p className="inline-block bg-gradient-to-r from-[#FF00FF] via-[#FFFF00] to-[#00FFFF] bg-clip-text font-sans text-lg text-transparent">
           Thanks! We will let you know when we launch.
         </p>
       ) : (
-        <form onSubmit={handleSubmit} className="mt-6 flex gap-3">
+        <form onSubmit={handleSubmit} className="flex gap-3">
           <input
             type="email"
             name="email"

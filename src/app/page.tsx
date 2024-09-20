@@ -33,8 +33,8 @@ export default function Home() {
       <div className="m-auto box-content flex min-h-96 w-full max-w-xl gap-4 p-6 landscape:min-h-60">
         <AI typing={typing} setTyping={setTyping} index={index} />
 
-        <div>
-          <p className="mt-[6px] font-sans text-lg">
+        <div className="mt-[6px] flex flex-col gap-6">
+          <p className="font-sans text-lg">
             <span className={`font-black ${!displayedText && "hidden"}`}>MOOD</span>
             {displayedText}
           </p>
