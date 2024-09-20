@@ -26,7 +26,7 @@ export default function Form() {
         <div className="mt-6 flex gap-3">
           <input
             type="email"
-            className="w-40 border-b-2 bg-background font-sans outline-none"
+            className="w-40 rounded-none border-b-2 bg-background font-sans outline-none"
             placeholder="Enter your email"
             required
           />
