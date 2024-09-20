@@ -29,13 +29,13 @@ export default function Form() {
           <input
             type="email"
             name="email"
-            className="w-44 rounded-none border-b-2 bg-background font-sans outline-none"
+            className="w-44 rounded-none border-b-2 border-foreground bg-background font-sans outline-none"
             placeholder="Enter your email"
             required
           />
 
           <button
-            className="rounded-full border-2 px-2 py-1 font-sans text-sm hover:opacity-50 active:opacity-25"
+            className="rounded-full border-2 border-foreground px-2 py-1 font-sans text-sm hover:opacity-50 active:opacity-25"
             disabled={state.submitting}
           >
             Submit
