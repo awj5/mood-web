@@ -1,47 +1,46 @@
 import { useState } from "react";
 import { CircleArrowRight } from "lucide-react";
+import { useForm } from "@formspree/react";
 
 export default function Form() {
-  const [step, setStep] = useState(1);
+  const [showForm, setShowForm] = useState(false);
+  const [state, handleSubmit] = useForm(process.env.NEXT_PUBLIC_FORM as string);
 
   const getNotifiedClick = () => {
-    setStep(2);
-  };
-
-  const submit = () => {
-    setStep(3);
+    setShowForm(true);
   };
 
   return (
     <>
-      {step === 1 ? (
-        <a
+      {!showForm ? (
+        <button
           onClick={getNotifiedClick}
-          className="mt-6 inline-flex cursor-pointer items-center gap-2 hover:opacity-50 active:opacity-25"
+          className="mt-6 inline-flex items-center gap-2 hover:opacity-50 active:opacity-25"
         >
           <span className="font-sans text-lg">Get notified</span>
           <CircleArrowRight size={24} />
-        </a>
-      ) : step === 2 ? (
-        <div className="mt-6 flex gap-3">
+        </button>
+      ) : state.succeeded ? (
+        <p className="mt-6 inline-block bg-gradient-to-r from-[#FF00FF] via-[#FFFF00] to-[#00FFFF] bg-clip-text font-sans text-lg text-transparent">
+          Thanks! We will let you know when we launch.
+        </p>
+      ) : (
+        <form onSubmit={handleSubmit} className="mt-6 flex gap-3">
           <input
             type="email"
-            className="w-40 rounded-none border-b-2 bg-background font-sans outline-none"
+            name="email"
+            className="w-44 rounded-none border-b-2 bg-background font-sans outline-none"
             placeholder="Enter your email"
             required
           />
 
-          <a
-            onClick={submit}
-            className="cursor-pointer rounded-full border-2 px-2 py-1 font-sans text-sm hover:opacity-50 active:opacity-25"
+          <button
+            className="rounded-full border-2 px-2 py-1 font-sans text-sm hover:opacity-50 active:opacity-25"
+            disabled={state.submitting}
           >
             Submit
-          </a>
-        </div>
-      ) : (
-        <p className="mt-6 inline-block bg-gradient-to-r from-[#FF00FF] via-[#FFFF00] to-[#00FFFF] bg-clip-text font-sans text-lg text-transparent">
-          Thanks! We will let you know when we launch.
-        </p>
+          </button>
+        </form>
       )}
     </>
   );
