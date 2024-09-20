@@ -1,8 +1,8 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { CircleArrowRight } from "lucide-react";
 import AI from "@/components/AI";
+import Form from "@/components/Form";
 
 export default function Home() {
   const [displayedText, setDisplayedText] = useState("");
@@ -30,7 +30,7 @@ export default function Home() {
 
   return (
     <main className="flex h-full">
-      <div className="m-auto box-content flex min-h-96 w-full max-w-xl gap-4 p-6 landscape:min-h-52">
+      <div className="m-auto box-content flex min-h-96 w-full max-w-xl gap-4 p-6 landscape:min-h-60">
         <AI typing={typing} setTyping={setTyping} index={index} />
 
         <div>
@@ -39,15 +39,7 @@ export default function Home() {
             {displayedText}
           </p>
 
-          {!typing && index ? (
-            <a
-              href="mailto:team@mood.ai?subject=Demo Request"
-              className="mt-6 inline-flex items-center gap-2 hover:opacity-50 active:opacity-25"
-            >
-              <span className="font-sans text-lg">Get notified</span>
-              <CircleArrowRight size={24} />
-            </a>
-          ) : null}
+          {!typing && index ? <Form /> : null}
         </div>
       </div>
     </main>
