@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import localFont from "next/font/local";
 import ogImage from "../../public/img/og.png";
 import "./globals.css";
@@ -45,6 +46,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${circular.variable}`}>{children}</body>
+      <GoogleAnalytics gaId="G-DYPPBCKDH4" />
     </html>
   );
 }
