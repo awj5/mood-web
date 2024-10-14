@@ -8,12 +8,12 @@ export default function Home() {
   const [displayedText, setDisplayedText] = useState("");
   const [index, setIndex] = useState(0);
   const [typing, setTyping] = useState(false);
+  const text =
+    ".ai is a privacy-focused platform tackling workplace burnout and promoting psychological safety. It offers daily emotion check-ins, secure chats, and AI insights to monitor and predict mental health trends. Organisations receive real-time, anonymous data with actionable recommendations to improve employee wellbeing.";
+
+  const words = text.split(" ");
 
   useEffect(() => {
-    const text =
-      ".ai is a privacy-focused platform tackling workplace burnout and promoting psychological safety. It offers daily emotion check-ins, secure chats, and AI insights to monitor and predict mental health trends. Organisations receive real-time, anonymous data with actionable recommendations to improve employee wellbeing.";
-    const words = text.split(" ");
-
     const timer = setTimeout(() => {
       if (typing && index < words.length) {
         // Type out word by word
@@ -33,7 +33,7 @@ export default function Home() {
       <div className="m-auto box-content flex min-h-96 w-full max-w-xl gap-4 p-6 landscape:min-h-60">
         <AI typing={typing} setTyping={setTyping} index={index} />
 
-        <div className="mt-[6px] flex flex-col gap-6">
+        <div className="mt-[6px] flex flex-col items-start gap-6">
           <p className="font-sans text-lg">
             <span className={`font-black ${!displayedText && "hidden"}`}>MOOD</span>
             {displayedText}

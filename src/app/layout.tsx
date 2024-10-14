@@ -27,7 +27,7 @@ const circular = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "MOOD.ai | How are you feeling?",
+  title: "MOOD.ai - How's work?",
   description: "MOOD.ai is a privacy-focused platform tackling workplace burnout and promoting psychological safety.",
   openGraph: {
     images: [
