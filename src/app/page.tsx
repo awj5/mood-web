@@ -9,7 +9,7 @@ export default function Home() {
   const [index, setIndex] = useState(0);
   const [typing, setTyping] = useState(false);
   const text =
-    ".ai is a privacy-focused platform tackling workplace burnout and promoting psychological safety. It offers daily emotion check-ins, secure chats, and AI insights to monitor and predict mental health trends. Organisations receive real-time, anonymous data with actionable recommendations to improve employee wellbeing.";
+    ".ai is the world's most intuitive workplace wellbeing app, prioritising privacy and psychological safety. It offers daily emotion check-ins, secure chats, and AI insights to monitor and predict mental health trends. Organisations receive real-time, anonymous data with actionable recommendations to improve employee wellbeing.";
 
   const words = text.split(" ");
 
